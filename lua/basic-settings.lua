@@ -1,7 +1,7 @@
 local set = vim.opt
 
 -- line numbers
--- set.relativenumber = true
+set.relativenumber = true
 set.number = true
 set.scrolloff = 10 -- cursor won't go to top or end of the file
 
@@ -12,7 +12,6 @@ set.backup = false
 set.hidden = true
 
 -- tabs & indentation
-
 set.tabstop = 4
 set.shiftwidth = 4
 set.expandtab = true
@@ -24,6 +23,7 @@ set.smartcase = true
 
 -- cursor line
 set.cursorline = true
+set.cursorcolumn = true
 
 -- appearance
 set.termguicolors = true
@@ -33,13 +33,11 @@ set.signcolumn = "yes"
 -- backspace
 set.backspace = "indent,eol,start"
 
--- clipboard
-set.clipboard:append("unnamedplus")
-
 -- splitwindows
 set.splitright = true
 set.splitbelow = true
 
-
 -- set.list = true
 -- vim.api.nvim_command("set listchars=eol:⏎ ")
+
+set.showtabline = 2

@@ -30,31 +30,20 @@ end
 return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
-
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-    use "EdenEast/nightfox.nvim" -- Packer
-    
+	use("EdenEast/nightfox.nvim") -- Packer
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
-
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-	use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+	-- use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
-	-- commenting with gc
-	use("numToStr/Comment.nvim")
-
-	-- file explorer
-	use("nvim-tree/nvim-tree.lua")
-
-	-- vs-code like icons
-	use("kyazdani42/nvim-web-devicons")
-
-	-- statusline
-	use("nvim-lualine/lualine.nvim")
+	use("numToStr/Comment.nvim") -- commenting with gc
+	use("nvim-tree/nvim-tree.lua") -- file explorer
+	use("kyazdani42/nvim-web-devicons") -- vs-code like icons
+	use("nvim-lualine/lualine.nvim") -- statusline
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
@@ -103,42 +92,73 @@ return packer.startup(function(use)
 	if packer_bootstrap then
 		require("packer").sync()
 	end
-    -- colors 
-    use("norcalli/nvim-colorizer.lua")
-    use {
-        "tversteeg/registers.nvim",
-        config = function()
-            require("registers").setup()
-        end,
-    }
-    use('lervag/vimtex')
-    use('glepnir/dashboard-nvim')
-    use('github/copilot.vim')
+	-- colors
+	use("norcalli/nvim-colorizer.lua")
+	use({
+		"tversteeg/registers.nvim",
+		config = function()
+			require("registers").setup()
+		end,
+	})
+	use("lervag/vimtex")
+	use("glepnir/dashboard-nvim")
+	use("github/copilot.vim")
 
-    use {
-      "folke/which-key.nvim",
-      config = function()
-        require("which-key").setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
-        }
-      end
-    }
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
-    use("lukas-reineke/indent-blankline.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("ThePrimeagen/harpoon")
+	use("hrsh7th/nvim-compe")
+	use("tpope/vim-repeat")
+	use("jalvesaq/Nvim-R")
+	use("rlane/pounce.nvim")
 
+	-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
+	use("romgrk/barbar.nvim")
+	use("mbbill/undotree")
+	use("folke/zen-mode.nvim")
+	use("marko-cerovac/material.nvim")
+	-- use({
+	-- 	"utilyre/barbecue.nvim",
+	-- 	tag = "*",
+	-- 	requires = {
+	-- 		"SmiteshP/nvim-navic",
+	-- 	},
+	-- 	config = function()
+	-- 		require("barbecue").setup()
+	-- 	end,
+	-- })
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
+	})
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
+				run = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
-
-
-
-
-
-
-
-
-
-
-
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
+	})
 end)
-
