@@ -56,8 +56,8 @@ map("n", "<leader>mm", "o<ESC>j")
 map("n", "d", '"_d')
 
 -- yank to to system clipboard and paste from it
--- map("n", "p", '"*p')
--- map("n", "y", '"*y')
+map("n", "p", '"*p')
+map("n", "y", '"+y')
 
 -- buffer movements
 map("n", "<leader>bp", ":bprevious<CR>")
