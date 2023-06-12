@@ -165,4 +165,10 @@ return packer.startup(function(use)
 		"nvim-telescope/telescope-file-browser.nvim",
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	})
+	use("kvrohit/mellow.nvim")
+	use({
+		"glepnir/zephyr-nvim",
+		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
+	})
+	use("gelguy/wilder.nvim")
 end)

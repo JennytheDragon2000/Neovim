@@ -99,6 +99,11 @@ map("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
 map("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
 map("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
 map("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
+map("n", "<leader>h1", ":lua require('harpoon.term').gotoTerminal(1)<CR>")
+map("n", "<leader>h2", ":lua require('harpoon.term').gotoTerminal(2)<CR>")
+map("n", "<leader>h3", ":lua require('harpoon.term').gotoTerminal(3)<CR>")
+map("n", "<leader>h4", ":lua require('harpoon.term').gotoTerminal(4)<CR>")
+map("n", "<leader>tt", ":lua require('harpoon.cmd-ui').toggle_quick_menu()<CR>")
 
 -- R
 map("n", "<Leader>rsr", "<Plug>RStart")
@@ -125,4 +130,5 @@ end)
 map("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
 
 -- exit the terminal mode
-map("t", "<Leader>jj", "<C-/><C-n>")
+-- map("t", "<Leader>jj", "<C-\\><C-n>")
+map("t", "qq", "<C-\\><C-n>")

@@ -44,5 +44,4 @@ set.hlsearch = false
 set.incsearch = true
 
 set.showtabline = 2
-
-vim.cmd("highlight CursorLine gui=underline cterm=underline")
+-- vim.o.shell = "/usr/bin/zsh"

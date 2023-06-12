@@ -24,6 +24,7 @@ require("plugins.tabbar")
 require("plugins.undotree")
 require("plugins.zenmode")
 require("plugins.comment")
+require("plugins.wilder-command-suggestions")
 
 -- Configure nvim-cmp and nvim-lspconfig
 local cmp = require("cmp")
