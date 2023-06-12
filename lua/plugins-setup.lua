@@ -161,4 +161,8 @@ return packer.startup(function(use)
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
 	})
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
 end)

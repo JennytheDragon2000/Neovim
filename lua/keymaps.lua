@@ -56,8 +56,10 @@ map("n", "<leader>mm", "o<ESC>j")
 map("n", "d", '"_d')
 
 -- yank to to system clipboard and paste from it
-map("n", "p", '"*p')
+map("n", "p", '"+p')
+map("v", "p", '"+p')
 map("n", "y", '"+y')
+map("v", "y", '"+y')
 
 -- buffer movements
 map("n", "<leader>bp", ":bprevious<CR>")
@@ -74,6 +76,14 @@ map("x", "J", ":move '>+1<CR>gv-gv", default_opts)
 -- Move selected line / block of right and left in visual mode
 map("v", "H", "<gv")
 map("v", "L", ">gv")
+
+map("n", "J", "mzJ`z")
+
+-- replace the word that I'm currently on
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 
 -- Paste over currently selected text without yanking it
 map("v", "p", '"_dP', default_opts)
@@ -108,3 +118,6 @@ end)
 map("n", "<Leader>J", function()
 	require("pounce").pounce({ input = { reg = "/" } })
 end)
+
+-- telescope file browser
+map("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })

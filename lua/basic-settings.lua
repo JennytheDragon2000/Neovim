@@ -39,5 +39,7 @@ set.splitbelow = true
 
 -- set.list = true
 -- vim.api.nvim_command("set listchars=eol:⏎ ")
+set.hlsearch = false
+set.incsearch = true
 
 set.showtabline = 2
