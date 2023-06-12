@@ -42,6 +42,8 @@ map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+map("n", "<leader>fk", "<cmd>Telescope keymaps<cr>") -- list available keymaps
+map("n", "<leader>ft", "<cmd>Telescope colorscheme<cr>") -- list available colorschemes
 
 -- vim-surround
 -- ys[motion][character] ex:- ysw" --add
@@ -121,3 +123,6 @@ end)
 
 -- telescope file browser
 map("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
+
+-- exit the terminal mode
+map("t", "<Leader>jj", "<C-/><C-n>")

@@ -23,7 +23,7 @@ set.smartcase = true
 
 -- cursor line
 set.cursorline = true
-set.cursorcolumn = true
+-- set.cursorcolumn = true
 
 -- appearance
 set.termguicolors = true
@@ -39,7 +39,10 @@ set.splitbelow = true
 
 -- set.list = true
 -- vim.api.nvim_command("set listchars=eol:⏎ ")
+
 set.hlsearch = false
 set.incsearch = true
 
 set.showtabline = 2
+
+vim.cmd("highlight CursorLine gui=underline cterm=underline")
