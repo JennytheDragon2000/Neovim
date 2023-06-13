@@ -42,6 +42,7 @@ set.splitbelow = true
 
 set.hlsearch = false
 set.incsearch = true
+set.mouse = "a" --Enable mouse mode
 
 set.showtabline = 2
 -- vim.o.shell = "/usr/bin/zsh"

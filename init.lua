@@ -25,29 +25,3 @@ require("plugins.undotree")
 require("plugins.zenmode")
 require("plugins.comment")
 require("plugins.wilder-command-suggestions")
-
--- Configure nvim-cmp and nvim-lspconfig
-local cmp = require("cmp")
-local lspconfig = require("lspconfig")
-
-cmp.setup({
-	snippet = {
-		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body)
-		end,
-	},
-	mapping = {
-		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.close(),
-		["<CR>"] = cmp.mapping.confirm({
-			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
-		}),
-		["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-		["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-	},
-	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "cmp_tabnine" },
-	},
-})

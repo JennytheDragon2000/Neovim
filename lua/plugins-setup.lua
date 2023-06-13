@@ -171,4 +171,5 @@ return packer.startup(function(use)
 		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
 	})
 	use("gelguy/wilder.nvim")
+	use("windwp/nvim-ts-autotag")
 end)
