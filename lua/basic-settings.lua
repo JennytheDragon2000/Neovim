@@ -48,4 +48,4 @@ set.mouse = "a" --Enable mouse mode
 -- vim.o.shell = "/usr/bin/zsh"
 
 -- Set TabLineFill to Normal
-vim.cmd([[highlight TabLineFill guibg=NONE ctermbg=NONE]])
+-- vim.cmd([[highlight TabLineFill guibg=NONE ctermbg=NONE]])

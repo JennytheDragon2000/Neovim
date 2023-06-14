@@ -58,10 +58,10 @@ map("n", "<leader>mm", "o<ESC>j")
 map("n", "d", '"_d')
 
 -- yank to to system clipboard and paste from it
-map("n", "p", '"+p')
-map("v", "p", '"+p')
-map("n", "y", '"+y')
-map("v", "y", '"+y')
+-- map("n", "p", '"+p')
+-- map("v", "p", '"+p')
+-- map("n", "y", '"+y')
+-- map("v", "y", '"+y')
 
 -- buffer movements
 map("n", "<leader>bp", ":bprevious<CR>")
@@ -132,3 +132,8 @@ map("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
 -- exit the terminal mode
 -- map("t", "<Leader>jj", "<C-\\><C-n>")
 map("t", "qq", "<C-\\><C-n>")
+
+-- hatgpt
+
+map("n", "<Leader>cc", ":ChatGPTCompleteCode<CR>")
+map("n", "<Leader>ca", ":ChatGPTRun explain_code<CR>")

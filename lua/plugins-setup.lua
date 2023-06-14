@@ -170,8 +170,19 @@ return packer.startup(function(use)
 		"glepnir/zephyr-nvim",
 		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
 	})
+	-- command suggestions
 	use("gelguy/wilder.nvim")
 	use("romgrk/doom-one.vim")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
-	-- use("folke/tokyonight.nvim")
+	use({
+		"jackMort/ChatGPT.nvim",
+		config = function()
+			require("chatgpt").setup({
+				-- api_key_cmd = "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",
+			})
+		end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+		},
+	})
 end)
