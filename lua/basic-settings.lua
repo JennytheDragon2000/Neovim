@@ -44,5 +44,8 @@ set.hlsearch = false
 set.incsearch = true
 set.mouse = "a" --Enable mouse mode
 
-set.showtabline = 2
+-- set.showtabline = 2
 -- vim.o.shell = "/usr/bin/zsh"
+
+-- Set TabLineFill to Normal
+vim.cmd([[highlight TabLineFill guibg=NONE ctermbg=NONE]])

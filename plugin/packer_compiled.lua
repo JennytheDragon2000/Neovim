@@ -89,10 +89,10 @@ _G.packer_plugins = {
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/Nvim-R",
     url = "https://github.com/jalvesaq/Nvim-R"
   },
-  ["barbar.nvim"] = {
+  ["bufferline.nvim"] = {
     loaded = true,
-    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
+    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -123,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  ["doom-one.vim"] = {
+    loaded = true,
+    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/doom-one.vim",
+    url = "https://github.com/romgrk/doom-one.vim"
   },
   ["friendly-snippets"] = {
     loaded = true,

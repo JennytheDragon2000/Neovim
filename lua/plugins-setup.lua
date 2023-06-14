@@ -123,7 +123,7 @@ return packer.startup(function(use)
 	use("rlane/pounce.nvim")
 
 	-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-	use("romgrk/barbar.nvim")
+	-- use("romgrk/barbar.nvim")
 	use("mbbill/undotree")
 	use("folke/zen-mode.nvim")
 	use("marko-cerovac/material.nvim")
@@ -171,5 +171,7 @@ return packer.startup(function(use)
 		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
 	})
 	use("gelguy/wilder.nvim")
-	use("windwp/nvim-ts-autotag")
+	use("romgrk/doom-one.vim")
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+	-- use("folke/tokyonight.nvim")
 end)
