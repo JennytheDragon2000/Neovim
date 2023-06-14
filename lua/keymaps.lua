@@ -139,3 +139,11 @@ map("n", "<Leader>cc", ":ChatGPTCompleteCode<CR>")
 map("n", "<Leader>ca", ":ChatGPTRun explain_code<CR>")
 map("x", "<Leader>a", ":ChatGPTRun explain_code<CR>")
 -- map("x", "<C-a>", ":ChatGPTRun explain_code<CR>")
+
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+map({ "n", "v" }, "<leader>y", [["+y]])
+map("n", "<leader>Y", [["+Y]])
+map({ "n", "v" }, "<leader>d", [["_d]])
