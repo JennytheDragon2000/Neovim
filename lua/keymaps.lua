@@ -137,3 +137,5 @@ map("t", "qq", "<C-\\><C-n>")
 
 map("n", "<Leader>cc", ":ChatGPTCompleteCode<CR>")
 map("n", "<Leader>ca", ":ChatGPTRun explain_code<CR>")
+map("x", "<Leader>a", ":ChatGPTRun explain_code<CR>")
+-- map("x", "<C-a>", ":ChatGPTRun explain_code<CR>")

@@ -185,4 +185,5 @@ return packer.startup(function(use)
 			"MunifTanjim/nui.nvim",
 		},
 	})
+	use("mattn/emmet-vim")
 end)

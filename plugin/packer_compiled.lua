@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/doom-one.vim",
     url = "https://github.com/romgrk/doom-one.vim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/friendly-snippets",
