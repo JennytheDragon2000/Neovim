@@ -153,3 +153,10 @@ vim.keymap.set("x", "<leader>p", [["+dP]])
 map({ "n", "v" }, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
 map({ "n", "v" }, "<leader>d", [["_d]])
+
+-- Define key mapping
+map("n", "<leader>nn", "/((<>))<CR>cgn")
+-- helllo thre can you make things((<>))which is related
+-- helllo thre can you make things((<>))which is related
+-- helllo thre can you make things((<>))which is related
+-- helllo thre can you make things((<>))which is related

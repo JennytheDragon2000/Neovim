@@ -94,12 +94,12 @@ return packer.startup(function(use)
 	end
 	-- colors
 	use("norcalli/nvim-colorizer.lua")
-	use({
-		"tversteeg/registers.nvim",
-		config = function()
-			require("registers").setup()
-		end,
-	})
+	-- use({
+	-- 	"tversteeg/registers.nvim",
+	-- 	config = function()
+	-- 		require("registers").setup()
+	-- 	end,
+	-- })
 	use("lervag/vimtex")
 	use("glepnir/dashboard-nvim")
 	use("github/copilot.vim")
