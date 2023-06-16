@@ -193,4 +193,5 @@ return packer.startup(function(use)
 		end,
 		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
 	})
+	use("SirVer/ultisnips")
 end)

@@ -160,3 +160,13 @@ map("n", "<leader>nn", "/((<>))<CR>cgn")
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
+
+vim.g.UltiSnipsExpandTrigger = "<tab>"
+
+-- Shortcut to go to the next position
+vim.g.UltiSnipsJumpForwardTrigger = "<c-j>"
+
+-- Shortcut to go to the previous position
+vim.g.UltiSnipsJumpBackwardTrigger = "<c-k>"
+
+vim.g.UltiSnipsSnippetDirectories = { "UltiSnips", "my_snippets" }

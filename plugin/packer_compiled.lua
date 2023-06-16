@@ -315,6 +315,11 @@ _G.packer_plugins = {
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
+  },
   undotree = {
     loaded = true,
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/undotree",
