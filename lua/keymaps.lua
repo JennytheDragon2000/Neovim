@@ -13,7 +13,8 @@ map("n", "K", "^")
 -- map("n", "<leader>bl", ":luafile %<CR>")
 map("n", "<leader>bl", ":so")
 map("n", "<leader>nh", ":nohl<CR>")
-map("n", "<leader>bs", ":w<CR>")
+map("n", "<leader>w", ":w<CR>")
+map("n", "<A-w>", ":w<CR>")
 map("n", "x", '"_x')
 
 map("n", "<C-u>", "<C-u>zz")
@@ -37,6 +38,7 @@ map("n", "<leader>sm", ":MaximizerToggle<CR>")
 map("n", "<leader><leader>", ":NvimTreeToggle<CR>")
 
 -- telescope
+map("n", "<A-f>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
@@ -95,10 +97,17 @@ map("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
 map("n", "<leader>ht", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
 map("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>")
 map("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>")
+
 map("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>")
 map("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>")
 map("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>")
 map("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>")
+
+map("n", "<A-u>", ":lua require('harpoon.ui').nav_file(1)<CR>")
+map("n", "<A-i>", ":lua require('harpoon.ui').nav_file(2)<CR>")
+map("n", "<A-o>", ":lua require('harpoon.ui').nav_file(3)<CR>")
+map("n", "<A-p>", ":lua require('harpoon.ui').nav_file(4)<CR>")
+
 map("n", "<leader>h1", ":lua require('harpoon.term').gotoTerminal(1)<CR>")
 map("n", "<leader>h2", ":lua require('harpoon.term').gotoTerminal(2)<CR>")
 map("n", "<leader>h3", ":lua require('harpoon.term').gotoTerminal(3)<CR>")
@@ -113,17 +122,14 @@ map("n", "<Leader>rsl", "<Plug>RSendLine")
 map("x", "<Leader>rssl", "<Plug>RSendSelection")
 
 -- pounce
-map("n", "f", function()
+map("n", "t", function()
 	require("pounce").pounce({ do_repeat = false })
 end)
-map("x", "f", function()
+map("x", "t", function()
 	require("pounce").pounce({})
 end)
 map("o", "<Leader>gs", function()
 	require("pounce").pounce({})
-end)
-map("n", "<Leader>J", function()
-	require("pounce").pounce({ input = { reg = "/" } })
 end)
 
 -- telescope file browser
@@ -141,7 +147,7 @@ map("x", "<Leader>a", ":ChatGPTRun explain_code<CR>")
 -- map("x", "<C-a>", ":ChatGPTRun explain_code<CR>")
 
 -- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>p", [["+dP]])
 
 -- next greatest remap ever : asbjornHaland
 map({ "n", "v" }, "<leader>y", [["+y]])
