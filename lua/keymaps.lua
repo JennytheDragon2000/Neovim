@@ -5,8 +5,8 @@ local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- basic file edit
-map("i", "jj", "<ESC>")
-map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>l")
+map("i", "jk", "<ESC>l")
 map("n", "H", "0")
 map("n", "L", "$")
 map("n", "K", "^")
