@@ -194,4 +194,5 @@ return packer.startup(function(use)
 		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
 	})
 	use("SirVer/ultisnips")
+	use("jikkujose/vim-visincr")
 end)

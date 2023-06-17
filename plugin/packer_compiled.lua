@@ -350,6 +350,11 @@ _G.packer_plugins = {
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
   },
+  ["vim-visincr"] = {
+    loaded = true,
+    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/vim-visincr",
+    url = "https://github.com/jikkujose/vim-visincr"
+  },
   vimtex = {
     loaded = true,
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/vimtex",

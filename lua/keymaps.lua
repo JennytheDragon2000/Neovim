@@ -71,6 +71,9 @@ map("n", "<leader>bn", ":bnext<CR>")
 map("n", "<leader>bt", ":enew<CR>")
 map("n", "<leader>bc", ":bd!<CR>")
 
+map("n", "<C-,>", ":bprevious<CR>") -- go to next tab
+map("n", "<C-.", ":bnext<CR>") -- go to previous tab
+
 -- quit neovim
 map("n", "<leader>qq", ":q!<CR>")
 
@@ -84,7 +87,7 @@ map("v", "L", ">gv")
 map("n", "J", "mzJ`z")
 
 -- replace the word that I'm currently on
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+map("n", "<leader>rr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
