@@ -71,9 +71,6 @@ map("n", "<leader>bn", ":bnext<CR>")
 map("n", "<leader>bt", ":enew<CR>")
 map("n", "<leader>bc", ":bd!<CR>")
 
-map("n", "<C-,>", ":bprevious<CR>") -- go to next tab
-map("n", "<C-.", ":bnext<CR>") -- go to previous tab
-
 -- quit neovim
 map("n", "<leader>qq", ":q!<CR>")
 
@@ -173,3 +170,9 @@ vim.g.UltiSnipsJumpForwardTrigger = "<c-j>"
 vim.g.UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 vim.g.UltiSnipsSnippetDirectories = { "UltiSnips", "my_snippets" }
+
+-- Set g:user_emmet_leader_key to ','
+vim.g.user_emmet_leader_key = ","
+vim.g.user_emmet_next_key = ",."
+
+-- map("n", "<leader>e", "<C-w>v") -- split vertically
