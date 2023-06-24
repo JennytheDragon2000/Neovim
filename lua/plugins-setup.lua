@@ -163,7 +163,6 @@ return packer.startup(function(use)
 	})
 	use({
 		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	})
 	use("kvrohit/mellow.nvim")
 	use({
@@ -195,4 +194,8 @@ return packer.startup(function(use)
 	})
 	use("SirVer/ultisnips")
 	use("jikkujose/vim-visincr")
+	-- use("MunifTanjim/nui.nvim")
+	-- use("rcarriga/nvim-notify")
+	-- use("folke/noice.nvim")
+	use("edluffy/hologram.nvim")
 end)

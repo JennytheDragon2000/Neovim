@@ -35,3 +35,11 @@ augroup DIRCHANGE
     autocmd DirChanged * :lua require('nerdtree').change_dir()
 augroup END
 ]])
+
+-- autocmd BufWinLeave *.* mkview
+-- autocmd BufWinEnter *.* silent loadview
+-- vim.api.nvim_create_autocmd(BufWinLeave *.* mkview)
+-- vim.api.nvim_create_autocmd(BufWinEnter *.* silent loadview)
+
+vim.cmd([[autocmd BufWinLeave *.* mkview]])
+vim.cmd([[autocmd BufWinEnter *.* silent loadview]])

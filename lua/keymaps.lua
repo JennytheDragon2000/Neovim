@@ -108,6 +108,11 @@ map("n", "<A-i>", ":lua require('harpoon.ui').nav_file(2)<CR>")
 map("n", "<A-o>", ":lua require('harpoon.ui').nav_file(3)<CR>")
 map("n", "<A-p>", ":lua require('harpoon.ui').nav_file(4)<CR>")
 
+map("i", "<A-u>", "<ESC>:lua require('harpoon.ui').nav_file(1)<CR>")
+map("i", "<A-i>", "<ESC>:lua require('harpoon.ui').nav_file(2)<CR>")
+map("i", "<A-o>", "<ESC>:lua require('harpoon.ui').nav_file(3)<CR>")
+map("i", "<A-p>", "<ESC>:lua require('harpoon.ui').nav_file(4)<CR>")
+
 map("n", "<leader>h1", ":lua require('harpoon.term').gotoTerminal(1)<CR>")
 map("n", "<leader>h2", ":lua require('harpoon.term').gotoTerminal(2)<CR>")
 map("n", "<leader>h3", ":lua require('harpoon.term').gotoTerminal(3)<CR>")
@@ -122,10 +127,16 @@ map("n", "<Leader>rsl", "<Plug>RSendLine")
 map("x", "<Leader>rssl", "<Plug>RSendSelection")
 
 -- pounce
-map("n", "t", function()
+-- map("n", "t", function()
+-- 	require("pounce").pounce({ do_repeat = false })
+-- end)
+-- map("x", "t", function()
+-- 	require("pounce").pounce({})
+-- end)
+map("n", "<leader>l", function()
 	require("pounce").pounce({ do_repeat = false })
 end)
-map("x", "t", function()
+map("x", "<leader>l", function()
 	require("pounce").pounce({})
 end)
 map("o", "<Leader>gs", function()
@@ -147,15 +158,18 @@ map("x", "<Leader>a", ":ChatGPTRun explain_code<CR>")
 -- map("x", "<C-a>", ":ChatGPTRun explain_code<CR>")
 
 -- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["+dP]])
 
 -- next greatest remap ever : asbjornHaland
+vim.keymap.set("x", "<leader>p", [["+dP]])
 map({ "n", "v" }, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
+map("n", "<leader>p", [["+p]])
 map({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Define key mapping
-map("n", "<leader>nn", "/((<>))<CR>cgn")
+map("n", "<leader>nm", "/((<>))<CR>cgn")
+map("n", "<leader>nn", "/><<CR>a")
+map("i", "<leader>nn", "<ESC>/><<CR>a")
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
@@ -176,3 +190,5 @@ vim.g.user_emmet_leader_key = ","
 vim.g.user_emmet_next_key = ",."
 
 -- map("n", "<leader>e", "<C-w>v") -- split vertically
+
+-- http://www.google.com/
