@@ -41,5 +41,5 @@ augroup END
 -- vim.api.nvim_create_autocmd(BufWinLeave *.* mkview)
 -- vim.api.nvim_create_autocmd(BufWinEnter *.* silent loadview)
 
-vim.cmd([[autocmd BufWinLeave *.* mkview]])
-vim.cmd([[autocmd BufWinEnter *.* silent loadview]])
+-- vim.cmd([[autocmd BufWinLeave *.* mkview]])
+-- vim.cmd([[autocmd BufWinEnter *.* silent loadview]])

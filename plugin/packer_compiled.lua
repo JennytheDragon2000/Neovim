@@ -155,11 +155,6 @@ _G.packer_plugins = {
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["hologram.nvim"] = {
-    loaded = true,
-    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/hologram.nvim",
-    url = "https://github.com/edluffy/hologram.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -294,11 +289,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/srinath/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["pounce.nvim"] = {
-    loaded = true,
-    path = "/home/srinath/.local/share/nvim/site/pack/packer/start/pounce.nvim",
-    url = "https://github.com/rlane/pounce.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,

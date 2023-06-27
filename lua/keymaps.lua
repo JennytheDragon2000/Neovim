@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+-- vim.g.maplocalleader = "\\"
 
 local map = vim.keymap.set -- for conciseness
 local default_opts = { noremap = true, silent = true }
@@ -56,7 +57,7 @@ map("n", "<leader>ft", "<cmd>Telescope colorscheme<cr>") -- list available color
 -- y[movement] ---> gr[movement]
 
 map("n", "<leader>cx", ":vsplit | :term python3 %<cr>")
-map("n", "<leader>mm", "o<ESC>j")
+-- map("n", "<leader>mm", "o<ESC>j")
 map("n", "d", '"_d')
 
 -- yank to to system clipboard and paste from it
@@ -68,6 +69,8 @@ map("n", "d", '"_d')
 -- buffer movements
 map("n", "<leader>bp", ":bprevious<CR>")
 map("n", "<leader>bn", ":bnext<CR>")
+map("n", "<C-p>", ":bprevious<CR>")
+map("n", "<C-n>", ":bnext<CR>")
 map("n", "<leader>bt", ":enew<CR>")
 map("n", "<leader>bc", ":bd!<CR>")
 
@@ -133,10 +136,10 @@ map("x", "<Leader>rssl", "<Plug>RSendSelection")
 -- map("x", "t", function()
 -- 	require("pounce").pounce({})
 -- end)
-map("n", "<leader>l", function()
+map("n", "<leader>m", function()
 	require("pounce").pounce({ do_repeat = false })
 end)
-map("x", "<leader>l", function()
+map("x", "<leader>m", function()
 	require("pounce").pounce({})
 end)
 map("o", "<Leader>gs", function()
@@ -169,12 +172,11 @@ map({ "n", "v" }, "<leader>d", [["_d]])
 -- Define key mapping
 map("n", "<leader>nm", "/((<>))<CR>cgn")
 map("n", "<leader>nn", "/><<CR>a")
-map("i", "<leader>nn", "<ESC>/><<CR>a")
+-- map("i", "<leader>nn", "<ESC>/><<CR>a")
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
 -- helllo thre can you make things((<>))which is related
-
 vim.g.UltiSnipsExpandTrigger = "<tab>"
 
 -- Shortcut to go to the next position
