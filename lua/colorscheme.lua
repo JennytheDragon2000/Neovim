@@ -30,3 +30,6 @@ end
 
 -- Set TabLineFill to Normal
 vim.cmd([[highlight TabLineFill guibg=black ctermbg=black]])
+
+vim.cmd([[highlight iCursor guifg=white guibg=yellow]])
+vim.opt.guicursor:append("i:block-iCursor")

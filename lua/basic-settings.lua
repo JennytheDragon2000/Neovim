@@ -5,6 +5,7 @@ set.relativenumber = true
 set.number = true
 set.scrolloff = 10 -- cursor won't go to top or end of the file
 
+set.guicursor = "n-v-c:block"
 -- backup files
 set.swapfile = false
 set.backup = false
